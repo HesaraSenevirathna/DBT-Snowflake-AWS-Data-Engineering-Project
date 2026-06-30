@@ -12,9 +12,19 @@ URL='your_s3_bucket_path';
     
 SHOW STAGES;
 
-COPY INTO <your_table_name>
+COPY INTO BOOKINGS
 FRoM @snowstage
-FILES=('your_file_name.csv')
+FILES=('bookings.csv')
+CREDENTIALS=(aws_key_id = 'yourkey', aws_secret_key = 'yoursecretkey');
+
+COPY INTO LISTINGS
+FRoM @snowstage
+FILES=('listings.csv')
+CREDENTIALS=(aws_key_id = 'yourkey', aws_secret_key = 'yoursecretkey');
+
+COPY INTO HOSTS
+FRoM @snowstage
+FILES=('hosts.csv')
 CREDENTIALS=(aws_key_id = 'yourkey', aws_secret_key = 'yoursecretkey');
 
 --You can get your credentials by going to aws and create an IAM user (Make sure to attach policies directly (s3fullaccess))
