@@ -27,5 +27,9 @@ FRoM @snowstage
 FILES=('hosts.csv')
 CREDENTIALS=(aws_key_id = 'yourkey', aws_secret_key = 'yoursecretkey');
 
+SELECT * FROM BOOKINGS;
+SELECT * FROM LISTINGS;
+SELECT * FROM HOSTS;
+
 --You can get your credentials by going to aws and create an IAM user (Make sure to attach policies directly (s3fullaccess))
 
