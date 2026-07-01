@@ -1,0 +1,11 @@
+sources:
+  - name: staging
+    database: aws  
+    schema: staging  
+    tables:
+      - name: listings
+      - name: bookings
+      - name: hosts
+
+
+# https://docs.getdbt.com/docs/build/sources      
