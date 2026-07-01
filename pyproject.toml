@@ -1,0 +1,10 @@
+[project]
+name = "dbt-snowflake-aws-data-engineering-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dbt-core>=1.11.11",
+    "dbt-snowflake>=1.11.6",
+]
